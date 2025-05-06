@@ -1,25 +1,12 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  overflow: hidden;
+html, body{
+	margin: 0;
+	overflow: hidden;
+	background: rgba(0,0,0,1.0);
 }
 
-#viewer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  z-index: 9999;
-}
-
-#gif {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
+#container{
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,1.0);
+	background-image: ;
 }

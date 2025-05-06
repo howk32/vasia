@@ -1,0 +1,428 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "RetroArch Pipeline Ribbon shader port for Wallpaper Engine using Three.js.\n\nLicense\nRetroArch - GPLv3\nThree.js - MIT",
+	"file" : "index.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"alpha" : 
+			{
+				"condition" : "shadersettings.value",
+				"fraction" : true,
+				"index" : 18,
+				"max" : 25.5,
+				"min" : 0,
+				"order" : 118,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "alpha",
+				"type" : "slider",
+				"value" : 1
+			},
+			"amplitude" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 21,
+				"max" : 5,
+				"min" : 0,
+				"order" : 121,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "amplitude",
+				"type" : "slider",
+				"value" : 1
+			},
+			"blend" : 
+			{
+				"condition" : "interpolation.value",
+				"index" : 9,
+				"order" : 109,
+				"text" : "blend",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"color1" : 
+			{
+				"condition" : "!usepreset.value",
+				"index" : 3,
+				"order" : 103,
+				"text" : "color1 ↙",
+				"type" : "color",
+				"value" : "0.10196078431372549 0.10196078431372549 0.10196078431372549"
+			},
+			"color2" : 
+			{
+				"condition" : "!usepreset.value && interpolation.value",
+				"index" : 4,
+				"order" : 104,
+				"text" : "color2 ↘",
+				"type" : "color",
+				"value" : "0.10196078431372549 0.10196078431372549 0.10196078431372549"
+			},
+			"color3" : 
+			{
+				"condition" : "!usepreset.value && interpolation.value",
+				"index" : 5,
+				"order" : 105,
+				"text" : "color3 ↖",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"color4" : 
+			{
+				"condition" : "!usepreset.value",
+				"index" : 6,
+				"order" : 106,
+				"text" : "color4 ↗",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"colorshift" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 31,
+				"max" : 10,
+				"min" : 0,
+				"order" : 131,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "colorshift",
+				"type" : "slider",
+				"value" : 1
+			},
+			"fps" : 
+			{
+				"condition" : "framerate.value == 2",
+				"fraction" : false,
+				"index" : 11,
+				"max" : 60,
+				"min" : 0,
+				"order" : 111,
+				"text" : "fps",
+				"type" : "slider",
+				"value" : 30
+			},
+			"framerate" : 
+			{
+				"index" : 10,
+				"options" : 
+				[
+					{
+						"label" : "native",
+						"value" : "0"
+					},
+					{
+						"label" : "settings",
+						"value" : "1"
+					},
+					{
+						"label" : "custom",
+						"value" : "2"
+					}
+				],
+				"order" : 110,
+				"text" : "framerate",
+				"type" : "combo",
+				"value" : "0"
+			},
+			"frequency" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 23,
+				"max" : 10,
+				"min" : 0,
+				"order" : 123,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "frequency",
+				"type" : "slider",
+				"value" : 1
+			},
+			"heightsegments" : 
+			{
+				"condition" : "shadersettings.value",
+				"fraction" : false,
+				"index" : 14,
+				"max" : 512,
+				"min" : 1,
+				"order" : 114,
+				"text" : "heightSegments",
+				"type" : "slider",
+				"value" : 128
+			},
+			"interpolation" : 
+			{
+				"index" : 7,
+				"order" : 107,
+				"text" : "interpolation",
+				"type" : "bool",
+				"value" : false
+			},
+			"materialsettings" : 
+			{
+				"index" : 19,
+				"order" : 119,
+				"text" : "materialSettings",
+				"type" : "bool",
+				"value" : false
+			},
+			"period" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 22,
+				"max" : 5,
+				"min" : 0,
+				"order" : 122,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "period",
+				"type" : "slider",
+				"value" : 1
+			},
+			"preset" : 
+			{
+				"condition" : "usepreset.value",
+				"fraction" : false,
+				"index" : 2,
+				"max" : 20,
+				"min" : 1,
+				"order" : 102,
+				"text" : "preset",
+				"type" : "slider",
+				"value" : 11
+			},
+			"randomnoise" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 32,
+				"max" : 2,
+				"min" : 0,
+				"order" : 132,
+				"precision" : 4,
+				"step" : 0.001,
+				"text" : "randomnoise",
+				"type" : "slider",
+				"value" : 1
+			},
+			"ribboncolor" : 
+			{
+				"condition" : "shadersettings.value",
+				"index" : 17,
+				"order" : 117,
+				"text" : "ribboncolor",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"rotation" : 
+			{
+				"condition" : "!interpolation.value",
+				"fraction" : false,
+				"index" : 8,
+				"max" : 360,
+				"min" : 0,
+				"order" : 108,
+				"text" : "rotation",
+				"type" : "slider",
+				"value" : 0
+			},
+			"scale" : 
+			{
+				"condition" : "shadersettings.value",
+				"fraction" : true,
+				"index" : 16,
+				"max" : 1.5,
+				"min" : 0,
+				"order" : 116,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "scale",
+				"type" : "slider",
+				"value" : 0.75
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"shadersettings" : 
+			{
+				"index" : 12,
+				"order" : 112,
+				"text" : "shaderSettings",
+				"type" : "bool",
+				"value" : false
+			},
+			"speed" : 
+			{
+				"condition" : "shadersettings.value",
+				"fraction" : true,
+				"index" : 15,
+				"max" : 0.1,
+				"min" : -0.1,
+				"order" : 115,
+				"precision" : 4,
+				"step" : 0.001,
+				"text" : "speed",
+				"type" : "slider",
+				"value" : 0.01
+			},
+			"stretch" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 30,
+				"max" : 5,
+				"min" : 0,
+				"order" : 130,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "stretch",
+				"type" : "slider",
+				"value" : 1
+			},
+			"stub" : 
+			{
+				"condition" : "false",
+				"index" : 0,
+				"order" : 100,
+				"text" : "stub",
+				"type" : "bool",
+				"value" : false
+			},
+			"sub_amplitude" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 24,
+				"max" : 10,
+				"min" : 0,
+				"order" : 124,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "sub_amplitude",
+				"type" : "slider",
+				"value" : 1
+			},
+			"sub_frequency1" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 26,
+				"max" : 5,
+				"min" : 0,
+				"order" : 126,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "sub_frequency1",
+				"type" : "slider",
+				"value" : 1
+			},
+			"sub_frequency2" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 27,
+				"max" : 5,
+				"min" : 0,
+				"order" : 127,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "sub_frequency2",
+				"type" : "slider",
+				"value" : 1
+			},
+			"sub_frequency3" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 28,
+				"max" : 25,
+				"min" : 0,
+				"order" : 128,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "sub_frequency3",
+				"type" : "slider",
+				"value" : 1
+			},
+			"sub_frequency4" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 29,
+				"max" : 25,
+				"min" : 0,
+				"order" : 129,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "sub_frequency4",
+				"type" : "slider",
+				"value" : 1
+			},
+			"sub_period" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 25,
+				"max" : 10,
+				"min" : 0,
+				"order" : 125,
+				"precision" : 2,
+				"step" : 0.1,
+				"text" : "sub_period",
+				"type" : "slider",
+				"value" : 1
+			},
+			"usepreset" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "usepreset",
+				"type" : "bool",
+				"value" : true
+			},
+			"vertical_offset" : 
+			{
+				"condition" : "materialsettings.value",
+				"fraction" : true,
+				"index" : 20,
+				"max" : 2,
+				"min" : -2,
+				"order" : 120,
+				"precision" : 4,
+				"step" : 0.001,
+				"text" : "vertical_offset",
+				"type" : "slider",
+				"value" : 0
+			},
+			"widthsegments" : 
+			{
+				"condition" : "shadersettings.value",
+				"fraction" : false,
+				"index" : 13,
+				"max" : 512,
+				"min" : 1,
+				"order" : 113,
+				"text" : "widthSegments",
+				"type" : "slider",
+				"value" : 128
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Abstract" ],
+	"title" : "RetroArch Pipeline Ribbon",
+	"type" : "web",
+	"version" : 1,
+	"visibility" : "public",
+	"workshopid" : "2438936336",
+	"workshopurl" : "steam://url/CommunityFilePage/2438936336"
+}
